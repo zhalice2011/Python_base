@@ -8,7 +8,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 #第一步模拟http请求
 class Spider():
-    url='https://www.panda.tv/cate/lol'
+    url='https://www.panda.tv/cate/hearthstone'
     root_patten = '<div class="video-info">([\w\W]*?)</div>' 
     name_patten = '</i>([\s\S]*?)</span>'
     rank_patten = '<span class="video-number">([\s\S]*?)</span>'
@@ -56,8 +56,9 @@ class Spider():
     #展现我们的数据
     def __show(self,anchors):
         for rank in range(0,len(anchors)):
-            print('排名:'+str(rank+1) )
-                print(rank+anchor['name']+'--------->'+anchor['rank'])
+            print('排名:'+str(rank+1)
+            +':'+ anchors[rank]['name']+'--------->'+anchors[rank]['rank'])
+               # print(rank+anchor['name']+'--------->'+anchor['rank'])
         #for anchor in anchors:
             
 
